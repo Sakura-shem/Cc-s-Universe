@@ -1,0 +1,106 @@
+<div class="ImgDiv">
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/0.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/1.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/2.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/3.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/4.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/5.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/6.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/7.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/8.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/9.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/10.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/11.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/12.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/13.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/14.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/15.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/16.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/17.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/18.jpg">
+        <div class="mask"></div>
+    </div>
+    <div class="Item">
+        <img class="Img" src="./Image/HangZhou/19.jpg">
+        <div class="mask"></div>
+    </div>
+</div>
+
+<div class = "overlay" id = "">
+	<a class="cancel" href="#"></a>
+	<div class="popup">
+	</div>
+</div>
+
+
+<script>
+    // 监听 IMG 的点击事件，获取 对应的图片地址
+    var Img = document.querySelectorAll('.Img');
+    var popup = document.querySelector(".overlay")
+    Array.from(Img).forEach(img => {
+        img.addEventListener('click', function(event) {
+            src = img.getAttribute("src");
+            popup.setAttribute("href", "#" + src)
+            img.setAttribute("href", "#" + src)
+            img.click()
+            alert(src);
+            // pop up 展示路径
+            // 插入 href 属性， 模拟点击
+        });
+    });
+</script>

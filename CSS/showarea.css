@@ -1,0 +1,52 @@
+.showarea h1, .showarea h2, .showarea h3, .showarea h4, .showarea h5, .showarea h6{
+	font-family: "PT Sans","SF UI Display", ".PingFang SC","PingFang SC", "Neue Haas Grotesk Text Pro", "Arial Nova", "Segoe UI", "Microsoft YaHei", "Microsoft JhengHei", "Helvetica Neue", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Hiragino Sans GB", sans-serif;
+	text-rendering:optimizelegibility;margin-bottom:1em;font-weight:bold; line-height: 1.8rem;	
+}
+
+.showarea h1{ 
+	font-size: 1rem;
+	text-align:center;
+	padding-bottom: 0.1rem;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+.showarea h2{
+	font-size: 0.8rem;
+	line-height:1.2;
+	position:relative;
+	margin-top:0.2rem;
+	margin-bottom:0.2rem;
+	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC') bottom left repeat-x;
+}
+.showarea h3{ font-size: 1.2rem;}
+.showarea h4{ font-size: 1.1rem;}
+.showarea h5{ font-size: 1.0rem;}
+.showarea h6{ font-size: 0.9rem;}
+
+.showarea ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+	margin-left:1rem;
+}
+
+.showarea li{
+	display: list-item;
+	text-align: -webkit-match-parent;
+	line-height:1.5;
+	font-size:0.5rem;
+}
+
+.showarea p{
+	font-size:0.5rem;
+	line-height:1.5;
+}
+
+.showarea .showareapad{
+	height: 2rem;
+}

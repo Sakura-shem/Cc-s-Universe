@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title> Shem's Universe </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href = "./CSS/Universe.css">
+        <link rel="stylesheet" href = "./CSS/showarea.css">
+        <link rel="stylesheet" href = "./CSS/Photo.css">
+        <script src="JS/Jquery.js"></script>
+        <script src="JS/Photo.js"></script>
+    </head>
+    <body>
+        <div class="slidebar">
+            <div id="home">
+                <svg viewBox="0 0 300 300">
+                    <path id="circlePath" fill="none" d="M 150, 150 m -80, 0 a 80, 80 0 0,1 160, 0 a 80, 80 0 0, 1 -160,    0 "/>
+                    <!-- <path id="circlePath"fill="none" d = "M 150, 150 m -15, 0 a 15,15 0 0,1 30,0 a 15,15 0 0,1 -30,0 "/> -->
+                    <!--     m -r 0 a r r 0 1 0 (r * 2) 0 a r r 0 1 0 -(r * 2) 0   -->
+                    <text fill="#000">
+                        <textPath xlink:href="#circlePath">cc's universe</textPath>
+                    </text>
+                </svg>
+            </div>                
+            <div class="Menu" id = "JLULife">
+                <div class="Label" id = "JLULabel" value = "JLULife">JLU Life</div>
+            </div>
+            <div class="Menu" id = "HangZhou">
+                <div class="Label" id = "HZLabel" value = "HZ-Photos">HangZhou</div>   
+            </div>
+        </div>
+        <div class = "pad-left" id="pad"></div>
+        <div class = "center scroll4">
+            <div class="showarea">
+                <h1 id="about">About</h1>
+                <p>This a little Universe belong to Shem.</p>
+                <h2 id="bio">Bio</h2>
+                <p>Hello, there is Shem, an undergraduate of Jilin University.<br></p>
+                <p>I'm a Fuji user who learning photography. You can find some photos here.<br></p>
+                <h2 id="license">License</h2>
+                <p>All photos or data are copyrighted.<br></p>
+                <p>Contact: <a href="mailto: jinian6718@163.com">jinian6718@163.com</a></p>
+                <!-- <div class="showareapad"></div> -->
+            </div> 
+        </div>
+        <div class="pad-right" id = "pad"></div>
+        <script>
+            $('.Menu').click(function(){
+                // 将其他 div value 归 0
+                var NodeList = Array.prototype.slice.call(document.querySelectorAll(".Menu")).concat(Array.prototype.slice.call(document.querySelectorAll(".MenuSelected")));
+                // 删除列表最后一个
+                    // 判断 id
+                // 对应 div 调整 
+            });
+            $("#home").click(function(){
+                $.ajax({url:"./pages/home.html",success:function(result){
+                    $(".showarea").html("")
+                    $(".showarea").html(result);
+                }});
+            });
+            $(".Label").click(function(){
+                var value = $(this).attr("value");
+                $.ajax({url:"./pages/"+value+".html",success:function(result){
+                    $(".showarea").html("");
+                    $(".showarea").html(result);
+                    // add specific color
+                    if (value == "JLULife"){
+                        $("#JLULabel").css("color", "rgb(217, 156, 87)");
+                        $("#HZLabel").css("color", "rgb(112, 112, 112)");
+                    }
+                    else{
+                        $("#HZLabel").css("color", "rgb(217, 156, 87)");
+                        $("#JLULabel").css("color", "rgb(112, 112, 112)");
+                    }
+                }});
+            });
+        </script>
+    </body>
+</html>

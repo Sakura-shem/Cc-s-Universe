@@ -1,0 +1,93 @@
+.ImgDiv {
+    column-count: 3;
+    column-gap: 0;
+}
+  
+.item {
+    position: relative;
+    counter-increment: count;
+    break-inside: avoid;
+    padding: 6px;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: default;
+}
+
+.mask {
+    user-select: none;
+    position: absolute; 
+    background: rgba(216, 210, 210, 1); 
+    color: #ffffff; 
+    opacity: 0; 
+    top: 0; 
+    right: 0; 
+    width: 100%; 
+    height: 100%; 
+    border-radius: 5px; 
+    pointer-events:none;
+}
+
+.item img:hover+.mask{
+    opacity: 0.35;
+}
+
+.item img:hover{
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+}
+.overlay .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    z-index: 5;
+}
+.overlayshow {
+    visibility: visible;
+    opacity: 1;
+}
+.popup .close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #666;
+}
+.popup{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.popup img{
+    width: auto;
+    height: auto;
+    max-width: 75%;
+    max-height: 75%;
+    display:flex;
+    justify-content:center;
+    position:relative;
+    margin:0 auto;
+    z-index: 6;
+}

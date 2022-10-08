@@ -1,0 +1,113 @@
+<div class="Body">
+    <div class="ImgDiv">
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/0.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/1.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/2.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/3.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/4.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/5.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/6.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/7.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/8.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/9.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/10.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/11.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/12.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/13.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/14.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/15.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/16.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/17.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/18.jpg">
+            <div class="mask"></div>
+        </div>
+        <div class="Item">
+            <img class="Img" src="./Image/JLULife/19.jpg">
+            <div class="mask"></div>
+        </div>
+    </div>
+    <div class = "overlay">
+        <a class="cancel" onclick = "popupdisable()"></a>
+        <div class="popup" >
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 监听 IMG 的点击事件，获取 对应的图片地址
+    var Img = document.querySelectorAll('.Img');
+    var popup = document.querySelector(".overlay");
+    var popupimg = document.querySelector(".popup");
+
+    Array.from(Img).forEach(img => {
+        img.addEventListener('click', function(event) {
+            var imgsrc = img.getAttribute("src");
+            popup.className = 'overlay overlayshow';
+            // pop up to show the img
+            console.log(imgsrc);
+            var tempimg = document.createElement("img");
+            tempimg.src = imgsrc;
+            popupimg.appendChild(tempimg);
+        });
+    });
+
+    function popupdisable() {
+        popup.className = "overlay";
+    }
+</script>
