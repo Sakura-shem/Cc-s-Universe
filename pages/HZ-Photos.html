@@ -79,28 +79,34 @@
         <img class="Img" src="./Image/HangZhou/19.jpg">
         <div class="mask"></div>
     </div>
-</div>
-
-<div class = "overlay" id = "">
-	<a class="cancel" href="#"></a>
-	<div class="popup">
-	</div>
+    <div class = "overlay">
+        <a class="cancel" onclick = "popupdisable()"></a>
+        <div class="popup" >
+        </div>
+    </div>
 </div>
 
 
 <script>
     // 监听 IMG 的点击事件，获取 对应的图片地址
     var Img = document.querySelectorAll('.Img');
-    var popup = document.querySelector(".overlay")
+    var popup = document.querySelector(".overlay");
+    var popupimg = document.querySelector(".popup");
+
     Array.from(Img).forEach(img => {
         img.addEventListener('click', function(event) {
-            src = img.getAttribute("src");
-            popup.setAttribute("href", "#" + src)
-            img.setAttribute("href", "#" + src)
-            img.click()
-            alert(src);
-            // pop up 展示路径
-            // 插入 href 属性， 模拟点击
+            var imgsrc = img.getAttribute("src");
+            popup.className = 'overlay overlayshow';
+            // pop up to show the img
+            console.log(imgsrc);
+            var tempimg = document.createElement("img");
+            tempimg.src = imgsrc;
+            popupimg.removeChild(popupimg.firstChild);
+            popupimg.appendChild(tempimg);
         });
     });
+
+    function popupdisable() {
+        popup.className = "overlay";
+    }
 </script>

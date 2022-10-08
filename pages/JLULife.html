@@ -103,6 +103,7 @@
             console.log(imgsrc);
             var tempimg = document.createElement("img");
             tempimg.src = imgsrc;
+            popupimg.removeChild(popupimg.firstChild);
             popupimg.appendChild(tempimg);
         });
     });
